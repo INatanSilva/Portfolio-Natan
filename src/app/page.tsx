@@ -54,7 +54,7 @@ export default function Home() {
           >
             {currentPage === 'inicio' && (
               <div>
-                <h1 className="text-[72px] font-bold mb-4 tracking-tight relative text-foreground">
+                <h1 className="text-[72px] font-bold mb-4 tracking-tight relative text-foreground glass-text">
                   Natan Silva
                 </h1>
                 <p className="text-xl tracking-[6px] text-muted font-light">
