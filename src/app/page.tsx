@@ -3,6 +3,7 @@
 import { BackgroundAnimation } from "@/components/BackgroundAnimation"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from 'next/image'
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('inicio')
@@ -65,7 +66,16 @@ export default function Home() {
 
             {currentPage === 'sobre' && (
               <div>
-                <h2 className="text-4xl font-bold mb-8 text-foreground">Sobre Mim</h2>
+                <div className="flex flex-col items-center mb-8">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-foreground/10 mb-6 relative">
+                    <img
+                      src="/gatinlindo.CR2.jpg"
+                      alt="Natan Silva"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 className="text-4xl font-bold text-foreground">Sobre Mim</h2>
+                </div>
                 <p className="text-lg text-muted leading-relaxed">
                   Desenvolvedor mobile apaixonado por criar experiências incríveis para usuários.
                   Com foco em React Native e tecnologias modernas, busco sempre entregar
