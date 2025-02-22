@@ -132,7 +132,7 @@ export default function Home() {
             <li>
               <button 
                 onClick={() => handlePageChange('inicio')}
-                className={`flex items-center gap-2 text-[15px] transition-colors ${
+                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-inicio ${
                   currentPage === 'inicio' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
@@ -146,7 +146,7 @@ export default function Home() {
             <li>
               <button 
                 onClick={() => handlePageChange('sobre')}
-                className={`flex items-center gap-2 text-[15px] transition-colors ${
+                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-sobre ${
                   currentPage === 'sobre' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
@@ -160,7 +160,7 @@ export default function Home() {
             <li>
               <button 
                 onClick={() => handlePageChange('projetos')}
-                className={`flex items-center gap-2 text-[15px] transition-colors ${
+                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-projetos ${
                   currentPage === 'projetos' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
@@ -174,7 +174,7 @@ export default function Home() {
             <li>
               <button 
                 onClick={() => handlePageChange('habilidades')}
-                className={`flex items-center gap-2 text-[15px] transition-colors ${
+                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-habilidades ${
                   currentPage === 'habilidades' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
@@ -188,7 +188,7 @@ export default function Home() {
             <li>
               <button 
                 onClick={() => handlePageChange('contato')}
-                className={`flex items-center gap-2 text-[15px] transition-colors ${
+                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-contato ${
                   currentPage === 'contato' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
