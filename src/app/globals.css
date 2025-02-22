@@ -138,3 +138,24 @@ body {
 .skill-progress {
   animation: skillProgress 1.5s ease-out forwards;
 }
+
+.project-card {
+  @apply cursor-pointer transform transition-all duration-300;
+}
+
+.project-card:hover {
+  @apply scale-105;
+}
+
+.project-card:hover .project-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

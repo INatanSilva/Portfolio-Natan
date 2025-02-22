@@ -1,0 +1,15 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Símbolo -->
+  <g transform="translate(20, 20)">
+    <!-- Formas entrelaçadas -->
+    <path d="M25,30 C25,20 35,15 45,20 C55,25 55,35 45,40 C35,45 25,40 25,30" 
+          fill="#7B6B9E" opacity="0.9"/>
+    <path d="M45,20 C55,20 65,25 65,35 C65,45 55,50 45,45 C35,40 35,30 45,20" 
+          fill="#D4A5A5" opacity="0.9"/>
+  </g>
+  
+  <!-- Texto PsyConnect -->
+  <text x="100" y="45" font-family="Quicksand, sans-serif" font-size="26" font-weight="500" fill="#3A2E39">
+    Psy<tspan fill="#7B6B9E">Connect</tspan>
+  </text>
+</svg>
