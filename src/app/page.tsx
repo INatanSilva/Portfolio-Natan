@@ -143,7 +143,7 @@ export default function Home() {
                       <div className="absolute left-0 top-0 h-full w-[100%] bg-[#E76F00] rounded-full skill-progress glow-java" />
                     </div>
                     <div className="mt-4 text-muted group-hover:text-foreground transition-colors">
-                      Desenvolvimento Android com padrões de projeto e boas práticas
+                      Desenvolvimento Android e Backend com Spring Boot, APIs RESTful e microsserviços
                     </div>
                   </div>
                 </div>
