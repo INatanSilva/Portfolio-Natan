@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { GeistSans } from 'geist/font'
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { TopBar } from "@/components/TopBar";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
 
 export const metadata: Metadata = {
   title: "Natan Silva",
@@ -16,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${geist.variable} font-sans antialiased`}>
+      <body className={GeistSans.className}>
         <ThemeProvider>
           <TopBar />
           {children}
