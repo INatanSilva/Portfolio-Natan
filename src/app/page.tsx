@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <>
       <BackgroundAnimation />
-      <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.main
             key={currentPage}
@@ -56,14 +56,14 @@ export default function Home() {
             animate="center"
             exit="exit"
             transition={pageTransition}
-            className="text-center mb-auto mt-auto relative w-full max-w-4xl px-4"
+            className="text-center w-full max-w-4xl"
           >
             {currentPage === 'inicio' && (
               <div>
-                <h1 className="text-[72px] font-bold mb-4 tracking-tight relative text-foreground glass-text">
+                <h1 className="text-[42px] sm:text-[72px] font-bold mb-4 tracking-tight relative text-foreground glass-text">
                   Natan Silva
                 </h1>
-                <p className="text-xl tracking-[6px] text-muted font-light">
+                <p className="text-lg sm:text-xl tracking-[4px] sm:tracking-[6px] text-muted font-light">
                   DESENVOLVEDOR MOBILE
                 </p>
               </div>
@@ -71,8 +71,8 @@ export default function Home() {
 
             {currentPage === 'sobre' && (
               <div className="max-w-4xl mx-auto h-[calc(100vh-200px)] flex flex-col items-center">
-                <div className="sticky top-0 flex flex-col items-center mb-12 bg-background/80 backdrop-blur-sm pt-4 pb-8 w-full">
-                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30">
+                <div className="sticky top-0 flex flex-col items-center mb-8 sm:mb-12 bg-background/80 backdrop-blur-sm pt-4 pb-6 sm:pb-8 w-full">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-4 sm:mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30">
                     <img
                       src="/gatinlindo.CR2.jpg"
                       alt="Natan Silva"
@@ -80,12 +80,12 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 hover:opacity-0 transition-opacity duration-300" />
                   </div>
-                  <h2 className="text-4xl font-bold text-foreground mb-2">Sobre Mim</h2>
-                  <div className="w-24 h-1 bg-foreground/10 rounded-full" />
+                  <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Sobre Mim</h2>
+                  <div className="w-20 sm:w-24 h-1 bg-foreground/10 rounded-full" />
                 </div>
 
                 <div className="overflow-y-auto flex-1 w-full px-4">
-                  <div className="space-y-6 text-lg leading-relaxed">
+                  <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                     <p className="text-muted hover:text-foreground transition-colors duration-300">
                       Sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em diversas áreas, 
                       incluindo <span className="text-[#7F52FF]">Kotlin</span>, <span className="text-[#E76F00]">Java</span>,{' '}
@@ -120,14 +120,14 @@ export default function Home() {
 
             {currentPage === 'projetos' && (
               <div>
-                <h2 className="text-4xl font-bold mb-8 text-foreground">Projetos</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-foreground">Projetos</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div 
                     className="project-card group"
                     onClick={() => handleProjectClick('psyconnect')}
                   >
-                    <div className="relative overflow-hidden rounded-lg bg-white/50 dark:bg-black/50 p-6 border border-border flex flex-col items-center">
-                      <div className="w-48 h-48 relative project-icon mb-6">
+                    <div className="relative overflow-hidden rounded-lg bg-white/50 dark:bg-black/50 p-4 sm:p-6 border border-border flex flex-col items-center">
+                      <div className="w-36 h-36 sm:w-48 sm:h-48 relative project-icon mb-4 sm:mb-6">
                         <Image
                           src="/psyconnect-logo-v2.svg"
                           alt="PsyConnect Logo"
@@ -135,8 +135,8 @@ export default function Home() {
                           className="object-contain"
                         />
                       </div>
-                      <h3 className="text-2xl font-bold mb-3">PsyConnect</h3>
-                      <p className="text-muted mb-4 text-center">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">PsyConnect</h3>
+                      <p className="text-sm sm:text-base text-muted mb-3 sm:mb-4 text-center">
                         Uma plataforma inovadora que conecta psicólogos e pacientes de forma acessível e eficiente.
                       </p>
                       <div className="flex flex-wrap gap-2 justify-center">
@@ -294,75 +294,75 @@ export default function Home() {
           </motion.main>
         </AnimatePresence>
 
-        <nav className="fixed bottom-12 bg-background/90 rounded-full px-8 py-4 shadow-lg shadow-foreground/5">
-          <ul className="flex items-center gap-12">
-            <li>
+        <nav className="fixed bottom-8 sm:bottom-12 bg-background/90 rounded-full shadow-lg shadow-foreground/5 max-w-[95%] mx-auto">
+          <ul className="flex items-center px-3 sm:px-8 py-2 sm:py-4 overflow-x-auto no-scrollbar">
+            <li className="flex-shrink-0">
               <button 
                 onClick={() => handlePageChange('inicio')}
-                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-inicio ${
+                className={`flex items-center gap-1 sm:gap-2 text-[13px] sm:text-[15px] px-2 sm:px-3 py-2 transition-all duration-300 nav-inicio whitespace-nowrap ${
                   currentPage === 'inicio' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 9.5L12 4L21 9.5" />
                   <path d="M19 13V19.4C19 19.7314 18.7314 20 18.4 20H5.6C5.26863 20 5 19.7314 5 19.4V13" />
                 </svg>
-                Início
+                <span className="hidden sm:inline">Início</span>
               </button>
             </li>
-            <li>
+            <li className="flex-shrink-0">
               <button 
                 onClick={() => handlePageChange('sobre')}
-                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-sobre ${
+                className={`flex items-center gap-1 sm:gap-2 text-[13px] sm:text-[15px] px-2 sm:px-3 py-2 transition-all duration-300 nav-sobre whitespace-nowrap ${
                   currentPage === 'sobre' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z" />
                   <path d="M12 15V12M12 9H12.01" />
                 </svg>
-                Sobre Mim
+                <span className="hidden sm:inline">Sobre Mim</span>
               </button>
             </li>
-            <li>
+            <li className="flex-shrink-0">
               <button 
                 onClick={() => handlePageChange('projetos')}
-                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-projetos ${
+                className={`flex items-center gap-1 sm:gap-2 text-[13px] sm:text-[15px] px-2 sm:px-3 py-2 transition-all duration-300 nav-projetos whitespace-nowrap ${
                   currentPage === 'projetos' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5Z" />
                   <path d="M7 7H17M7 12H17M7 17H17" />
                 </svg>
-                Projetos
+                <span className="hidden sm:inline">Projetos</span>
               </button>
             </li>
-            <li>
+            <li className="flex-shrink-0">
               <button 
                 onClick={() => handlePageChange('habilidades')}
-                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-habilidades ${
+                className={`flex items-center gap-1 sm:gap-2 text-[13px] sm:text-[15px] px-2 sm:px-3 py-2 transition-all duration-300 nav-habilidades whitespace-nowrap ${
                   currentPage === 'habilidades' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 18L22 12L16 6" />
                   <path d="M8 6L2 12L8 18" />
                 </svg>
-                Habilidades
+                <span className="hidden sm:inline">Habilidades</span>
               </button>
             </li>
-            <li>
+            <li className="flex-shrink-0">
               <button 
                 onClick={() => handlePageChange('contato')}
-                className={`flex items-center gap-2 text-[15px] transition-all duration-300 nav-contato ${
+                className={`flex items-center gap-1 sm:gap-2 text-[13px] sm:text-[15px] px-2 sm:px-3 py-2 transition-all duration-300 nav-contato whitespace-nowrap ${
                   currentPage === 'contato' ? 'text-foreground' : 'text-muted hover:text-foreground'
                 }`}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" />
                 </svg>
-                Contato
+                <span className="hidden sm:inline">Contato</span>
               </button>
             </li>
           </ul>
