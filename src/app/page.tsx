@@ -70,22 +70,51 @@ export default function Home() {
             )}
 
             {currentPage === 'sobre' && (
-              <div>
-                <div className="flex flex-col items-center mb-8">
-                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-foreground/10 mb-6 relative">
+              <div className="max-w-4xl mx-auto h-[calc(100vh-200px)] flex flex-col items-center">
+                <div className="sticky top-0 flex flex-col items-center mb-12 bg-background/80 backdrop-blur-sm pt-4 pb-8 w-full">
+                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30">
                     <img
                       src="/gatinlindo.CR2.jpg"
                       alt="Natan Silva"
                       className="w-full h-full object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 hover:opacity-0 transition-opacity duration-300" />
                   </div>
-                  <h2 className="text-4xl font-bold text-foreground">Sobre Mim</h2>
+                  <h2 className="text-4xl font-bold text-foreground mb-2">Sobre Mim</h2>
+                  <div className="w-24 h-1 bg-foreground/10 rounded-full" />
                 </div>
-                <p className="text-lg text-muted leading-relaxed">
-                  Desenvolvedor mobile apaixonado por criar experiências incríveis para usuários.
-                  Com foco em React Native e tecnologias modernas, busco sempre entregar
-                  soluções elegantes e performáticas.
-                </p>
+
+                <div className="overflow-y-auto flex-1 w-full px-4">
+                  <div className="space-y-6 text-lg leading-relaxed">
+                    <p className="text-muted hover:text-foreground transition-colors duration-300">
+                      Sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em diversas áreas, 
+                      incluindo <span className="text-[#7F52FF]">Kotlin</span>, <span className="text-[#E76F00]">Java</span>,{' '}
+                      <span className="text-[#54C5F8]">Flutter</span>, <span className="text-[#6DB33F]">Spring Boot</span> e{' '}
+                      <span className="text-[#FFCA28]">Firebase</span>. Com um olhar atento à experiência do usuário e à 
+                      eficiência do código, busco sempre criar soluções inteligentes e de fácil uso.
+                    </p>
+
+                    <p className="text-muted hover:text-foreground transition-colors duration-300">
+                      Minha jornada no desenvolvimento começou com o objetivo de transformar ideias em produtos reais, 
+                      e desde então venho trabalhando em projetos que envolvem desde aplicativos móveis até sistemas 
+                      de backend robustos. Sou movido pela constante busca de aprimoramento, sempre aprendendo novas 
+                      tecnologias e técnicas para oferecer o melhor em cada projeto.
+                    </p>
+
+                    <p className="text-muted hover:text-foreground transition-colors duration-300">
+                      Tenho experiência em projetos como o <span className="font-semibold">PsyConnect</span>, que conecta 
+                      psicólogos e pacientes, e o <span className="font-semibold">Finora</span>, um aplicativo de 
+                      gerenciamento financeiro pessoal. Meu foco é criar soluções que realmente façam a diferença para 
+                      os usuários, seja na simplificação de processos, na melhoria da experiência do usuário ou na 
+                      performance do sistema.
+                    </p>
+
+                    <p className="text-muted hover:text-foreground transition-colors duration-300 mb-12">
+                      Estou sempre aberto a novos desafios e oportunidades para crescer e impactar positivamente a 
+                      vida das pessoas por meio da tecnologia.
+                    </p>
+                  </div>
+                </div>
               </div>
             )}
 
