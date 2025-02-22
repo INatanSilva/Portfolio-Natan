@@ -80,3 +80,61 @@ body {
   color: #A8E6CF;
   text-shadow: 0 0 10px rgba(168, 230, 207, 0.3);
 }
+
+.skill-card {
+  @apply bg-white/50 dark:bg-black/50 p-6 rounded-xl border border-border 
+  backdrop-blur-sm transform transition-all duration-300;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+.skill-card:hover {
+  @apply scale-105 shadow-xl;
+  border-color: rgba(var(--foreground), 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.glow-kotlin {
+  box-shadow: 0 0 10px #7F52FF;
+}
+
+.glow-flutter {
+  box-shadow: 0 0 10px #54C5F8;
+}
+
+.glow-java {
+  box-shadow: 0 0 10px #E76F00;
+}
+
+@keyframes skillProgress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.skill-progress {
+  animation: skillProgress 1.5s ease-out forwards;
+}
