@@ -74,7 +74,7 @@ export default function Home() {
                 <div className="sticky top-0 flex flex-col items-center mb-8 sm:mb-12 bg-background/80 backdrop-blur-sm pt-4 pb-6 sm:pb-8 w-full">
                   <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-4 sm:mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30">
                     <img
-                      src="/gatinlindo.CR2.jpg"
+                      src="/natansilva.jpg"
                       alt="Natan Silva"
                       className="w-full h-full object-cover"
                     />
