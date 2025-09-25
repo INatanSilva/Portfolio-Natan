@@ -64,7 +64,7 @@ export default function Home() {
                   Natan Silva
                 </h1>
                 <p className="text-lg sm:text-xl tracking-[4px] sm:tracking-[6px] text-muted font-light">
-                  DESENVOLVEDOR MOBILE
+                  Software Engineer
                 </p>
               </div>
             )}
