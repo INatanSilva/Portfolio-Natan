@@ -73,10 +73,13 @@ export default function Home() {
   <div className="w-full max-w-3xl mx-auto flex flex-col items-center py-8 sm:py-12 px-4">
     <div className="flex flex-col items-center w-full">
       <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-5 sm:mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30 shrink-0">
-        <img
+        <Image
           src="/fotoperfil.jpg"
           alt="Natan Silva"
-          className="w-full h-full object-cover"
+          fill
+          sizes="(min-width: 640px) 160px, 112px"
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 hover:opacity-0 transition-opacity duration-300" />
       </div>

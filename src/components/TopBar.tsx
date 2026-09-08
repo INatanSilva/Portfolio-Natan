@@ -1,12 +1,8 @@
 'use client'
 
-import { useTheme } from 'next-themes'
 import { ThemeToggle } from './ThemeToggle'
 
 export function TopBar() {
-  const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === 'dark'
-
   return (
     <div className="fixed top-0 left-0 right-0 h-12 flex items-center justify-between px-4 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="flex items-center gap-2">
