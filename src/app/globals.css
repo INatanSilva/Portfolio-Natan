@@ -169,3 +169,31 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;  /* Chrome, Safari and Opera */
 }
+
+/* Scrollbar minimalista */
+.scrollbar-minimal {
+  scrollbar-width: thin;  /* Firefox */
+  scrollbar-color: var(--border) transparent;
+}
+
+.scrollbar-minimal::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollbar-minimal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-minimal::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 9999px;
+}
+
+.scrollbar-minimal:hover {
+  scrollbar-color: var(--muted) transparent;
+}
+
+.scrollbar-minimal:hover::-webkit-scrollbar-thumb {
+  background-color: var(--muted);
+}

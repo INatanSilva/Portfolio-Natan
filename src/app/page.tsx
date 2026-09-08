@@ -70,7 +70,7 @@ export default function Home() {
             )}
 
             {currentPage === 'sobre' && (
-  <div className="w-full max-w-3xl mx-auto flex flex-col items-center px-1 sm:px-4 max-h-[calc(100dvh-13rem)] overflow-y-auto overscroll-contain py-2 pr-2 sm:pr-3">
+  <div className="scrollbar-minimal w-full max-w-3xl mx-auto flex flex-col items-center px-1 sm:px-4 max-h-[calc(100dvh-13rem)] overflow-y-auto overscroll-contain py-2 pr-2 sm:pr-3">
     <div className="flex flex-col items-center w-full shrink-0">
       <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-foreground/10 mb-4 sm:mb-5 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30 shrink-0">
         <Image
