@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <>
       <BackgroundAnimation />
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen flex flex-col items-center [justify-content:safe_center] px-4 sm:px-6 lg:px-8 pt-16 pb-28 sm:pb-32">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.main
             key={currentPage}
@@ -70,22 +70,22 @@ export default function Home() {
             )}
 
             {currentPage === 'sobre' && (
-  <div className="w-full max-w-3xl mx-auto flex flex-col items-center py-8 sm:py-12 px-4">
-    <div className="flex flex-col items-center w-full">
-      <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-5 sm:mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30 shrink-0">
+  <div className="w-full max-w-3xl mx-auto flex flex-col items-center px-1 sm:px-4 max-h-[calc(100dvh-13rem)] overflow-y-auto overscroll-contain py-2 pr-2 sm:pr-3">
+    <div className="flex flex-col items-center w-full shrink-0">
+      <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-foreground/10 mb-4 sm:mb-5 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30 shrink-0">
         <Image
           src="/fotoperfil.jpg"
           alt="Natan Silva"
           fill
-          sizes="(min-width: 640px) 160px, 112px"
+          sizes="(min-width: 640px) 144px, 96px"
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 hover:opacity-0 transition-opacity duration-300" />
       </div>
 
-      <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Sobre Mim</h2>
-      <div className="w-20 sm:w-24 h-1 bg-foreground/10 rounded-full mb-5 sm:mb-6" />
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Sobre Mim</h2>
+      <div className="w-16 sm:w-20 h-1 bg-foreground/10 rounded-full mb-4 sm:mb-5" />
 
       {/* Skills diretamente abaixo da foto */}
       <div className="flex flex-wrap gap-2 justify-center max-w-xl">
@@ -107,8 +107,8 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="w-full mt-8 sm:mt-10">
-      <div className="space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed sm:leading-loose text-left">
+    <div className="w-full mt-6 sm:mt-8 shrink-0 pb-2">
+      <div className="space-y-4 sm:space-y-5 text-base sm:text-lg leading-relaxed text-left">
         <p className="text-muted hover:text-foreground transition-colors duration-300">
           Sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em diversas áreas do desenvolvimento de software.
           Tenho foco em boas práticas, performance e escalabilidade, sempre buscando criar soluções inteligentes e intuitivas.
