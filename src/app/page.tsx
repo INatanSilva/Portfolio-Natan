@@ -70,9 +70,9 @@ export default function Home() {
             )}
 
             {currentPage === 'sobre' && (
-  <div className="max-w-4xl mx-auto h-[calc(100vh-200px)] flex flex-col items-center">
-    <div className="sticky top-0 flex flex-col items-center mb-8 sm:mb-12 bg-background/80 backdrop-blur-sm pt-4 pb-6 sm:pb-8 w-full">
-      <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-4 sm:mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30">
+  <div className="w-full max-w-3xl mx-auto flex flex-col items-center py-8 sm:py-12 px-4">
+    <div className="flex flex-col items-center w-full">
+      <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-foreground/10 mb-5 sm:mb-6 relative transform hover:scale-105 transition-transform duration-300 hover:border-foreground/30 shrink-0">
         <img
           src="/fotoperfil.jpg"
           alt="Natan Silva"
@@ -80,12 +80,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 hover:opacity-0 transition-opacity duration-300" />
       </div>
-      
+
       <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Sobre Mim</h2>
-      <div className="w-20 sm:w-24 h-1 bg-foreground/10 rounded-full mb-4" />
+      <div className="w-20 sm:w-24 h-1 bg-foreground/10 rounded-full mb-5 sm:mb-6" />
 
       {/* Skills diretamente abaixo da foto */}
-      <div className="flex flex-wrap gap-2 mt-4">
+      <div className="flex flex-wrap gap-2 justify-center max-w-xl">
         {[
           "Java & Spring Boot",
           "Kotlin",
@@ -96,7 +96,7 @@ export default function Home() {
         ].map((skill) => (
           <span
             key={skill}
-            className="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium shadow-sm hover:scale-105 transition-transform"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs sm:text-sm font-medium shadow-sm hover:scale-105 transition-transform"
           >
             {skill}
           </span>
@@ -104,15 +104,15 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="overflow-y-auto flex-1 w-full px-4">
-      <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
+    <div className="w-full mt-8 sm:mt-10">
+      <div className="space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed sm:leading-loose text-left">
         <p className="text-muted hover:text-foreground transition-colors duration-300">
-          Sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em diversas áreas do desenvolvimento de software. 
+          Sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em diversas áreas do desenvolvimento de software.
           Tenho foco em boas práticas, performance e escalabilidade, sempre buscando criar soluções inteligentes e intuitivas.
         </p>
 
-        <p className="text-muted hover:text-foreground transition-colors duration-300 mb-12">
-          Minha jornada envolve desde aplicativos móveis até sistemas backend robustos, sempre aprendendo novas tecnologias 
+        <p className="text-muted hover:text-foreground transition-colors duration-300">
+          Minha jornada envolve desde aplicativos móveis até sistemas backend robustos, sempre aprendendo novas tecnologias
           e me desafiando em projetos que geram impacto real.
         </p>
       </div>
